@@ -1,0 +1,2 @@
+"Peptide"	"Charge"	"Accession"	"Species"	"Description"	"# in DB"	"PPM Error"	"Score"	"E-value"	"Filename"	"RT Start"	"RT Stop"	"Light Area"	"Heavy Area"	"Ratio"	"Light Isotope Corr"	"Heavy Isotope Corr"	"XIC Corr"
+"YYYDVYLYDR"	"2"	"YYQ9Y6Y8"	"HUMAN"	"SEC23-interacting protein"	"1"	"-2.3"	"17.2"	"0.0018"	"VE20120127-13.mzXML"	"41.7792"	"43.0612"	"46755.1"	"33970.6"	"1.37634"	"0.984396"	"0.991574"	"0.911212"
