@@ -1,0 +1,3 @@
+"Peptide"	"Accession"	"Species"	"Description"	"# in DB"	"Avg Peptide Ratio"	"# Peptide Ratio"	"GO_Compartment"
+"YYPTEDVPR"	"Q02878"	"HUMAN"	"60S ribosomal protein L6"	"1"	"1.16848"	"2"	"cytosol;ribosome;cytosolic large ribosomal subunit;intracellular;"
+"AAAAAAAAAAAAAAAGAGAGAK"	"P55011"	"HUMAN"	"Solute carrier family 12 member 2"	"1"	"1.0679"	"2"	"basolateral plasma membrane;integral to plasma membrane;apical plasma membrane;membrane fraction;apical plasma membrane;membrane;"
