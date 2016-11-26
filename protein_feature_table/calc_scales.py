@@ -28,7 +28,7 @@ def parse_scale_file(filename):
     result = {}
     with open(filename) as f:
         contents = f.readlines()
-        
+
     for line in contents:
         s = line.split(",")
         if (s):
@@ -49,12 +49,12 @@ def calc_scale(sequence, table):
         if acid not in table:
             continue
         scale += table[acid]
-        
+
     avg = scale/len(sequence)
     return avg
 
 if __name__ == "__main__":
-    all_scale_tables = load_all_scale_tables() 
+    all_scale_tables = load_all_scale_tables()
     for scale in all_scale_tables:
         table = all_scale_tables[scale]
         print scale + ": " + str(calc_scale("AAAAAAAAAAA", table))
