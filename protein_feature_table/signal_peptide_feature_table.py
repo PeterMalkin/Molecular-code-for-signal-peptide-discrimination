@@ -1,12 +1,16 @@
 from calc_scales import load_all_scale_tables, calc_scale
 from load_protein_sequences import load_protein_sequences
-from sensitivity_labels import get_sensitivity_label
+from sensitivity_labels import get_sensitivity_label, get_min_Gcalc, get_min_KD, get_min_WW
 
 def get_table_heading(all_scale_tables):
     result = []
     result.append("accession")
     result.append("signal sequence")
     result.append("sensitivity label")
+    result.append("min _Gcalc")
+    result.append("min KD")
+    result.append("min WW")
+    
     for scale in all_scale_tables:
         result.append("min "+scale)
         result.append("max "+scale)
@@ -30,7 +34,7 @@ def calc_min_max_scale_value(sequence,table):
                 max_scale_signal_seq = value
             if (value < min_scale_signal_seq):
                 min_scale_signal_seq = value
-    
+
     return min_scale_signal_seq,max_scale_signal_seq
 
 def calculate_signal_peptide_features_table(all_scale_tables, all_sequences):
@@ -39,13 +43,14 @@ def calculate_signal_peptide_features_table(all_scale_tables, all_sequences):
         line = []
         accession = item[0]
         signal_seq = item[1]
-        
-        sensitivity_label = get_sensitivity_label(accession)
-         
+
         line.append(accession)
         line.append(signal_seq)
-        line.append(sensitivity_label)
-        
+        line.append(get_sensitivity_label(accession))
+        line.append(get_min_Gcalc(accession))
+        line.append(get_min_KD(accession))
+        line.append(get_min_WW(accession))
+
         for scale in all_scale_tables:
             table = all_scale_tables[scale]
             min_scale_signal_seq,max_scale_signal_seq = calc_min_max_scale_value(signal_seq, table)
